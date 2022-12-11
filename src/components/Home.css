@@ -1,0 +1,12 @@
+.my-brand{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    /* color: red; */
+  }
+  .my-brand:hover {
+    transition: 0.3s ease;
+    color: #9a9da0;
+    text-decoration: none;
+    
+  }
