@@ -2,8 +2,8 @@ import React from 'react'
 import logo from './logo.png';
 import image1 from './image1.jpg';
 // import background from './background.jpeg';
-import './Home.css'
-// import '../App.css'
+import './Home.css';
+// import '../App.css';
 
 const Home = () => {
     return (
@@ -82,18 +82,7 @@ const Home = () => {
                         href="#"> harshilchandratre.com</a>
                 </div>
             </footer> */}
-
-
-
-
-
-
-
-
-
-
-
-        </div>
+            </div>
         // </div>
 
 
