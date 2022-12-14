@@ -1,4 +1,6 @@
-
+*::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   margin: 0;
@@ -9,12 +11,14 @@ body {
   box-sizing: border-box;
 
   /* background-image: url('../components/bg.jpg'); */
-  background-color: #3E497A;
+  /* background-color: #3E497A; */
+  background-color: white;
+
   /* background-repeat: no-repeat;
   background-size: cover; */
   /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .my-brand {
@@ -36,6 +40,8 @@ body {
   width: 100%;
   position: fixed;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 
   /* background-color: #21325E; */
   /* background-color: yellow; */
@@ -47,42 +53,46 @@ body {
   transform: rotate(45deg);
 }
 
-.container{
+.container {
   background-color: #F0F0F0;
   /* border-radius: 2px solid black; */
   margin-top: 80px;
   margin-bottom: 40px;
-  
+
+  z-index: -1;
+
+  /* responsiveness */
+  background-size: contain;
+  overflow: auto;
+  resize: horizontal;
+
+  /* To set a fix dimension box */
+  /* aspect-ratio: 100 / 100; */
+
   /* bottom: ; */
 
   height: auto;
   width: 1200px;
   border: none;
-  
+
   /* overflow: hidden; */
 
   /* margin: 0; */
   padding: 20px;
-
-  /* position: absolute; 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-  /* overflow: auto; */ 
 }
 
-.Heading{
+.Heading {
   text-align: center;
   font-size: 40px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.subHeading{
-  color: green; 
+.subHeading {
+  color: green;
   text-align: center;
 }
 
-.img{
+.img {
   height: 60px;
   width: 60px;
   border: 2px solid black;
