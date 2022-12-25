@@ -1,0 +1,150 @@
+
+.backgroundlogin{
+    height: 100vh;
+}
+
+.containerlogin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(49, 49, 49, 0.71);
+    color: #fff;
+
+    border: none;
+    border-radius: 15px;
+    width: 500px;
+    height: auto;
+
+    /* resizing feature */
+    overflow: auto;
+    resize: both;
+
+    /* shadow behind the box */
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.683);
+    z-index: 1;
+
+}
+
+.loginField {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #d3d3d3;
+    box-shadow: none;
+    color: #111;
+}
+
+.loginField:invalid {
+    outline: 0;
+    /* // color: #ff2300;
+            //   border-color: #ff2300; */
+}
+
+.loginField:focus,
+.loginField:valid {
+    border-color: #00dd22;
+}
+
+.loginField:focus~label,
+.loginField:valid~label {
+    /* font-size: 14px; */
+    top: -24px;
+    color: #00dd22;
+}
+
+h1#loginhead {
+    /* font-size: 40px; */
+}
+
+/* table {
+            margin: auto;
+            font-weight: bold;
+            color: #000000;
+        } */
+
+
+table a {
+    text-decoration: none;
+    font-style: italic;
+    /* font-size: 20px; */
+    color: rgb(156, 154, 154);
+}
+
+table a#fpass:hover {
+    color: rgb(171, 171, 171);
+    transition: 0.3s ease-in-out;
+}
+
+input[type=text],
+input[type=password] {
+    border-radius: 8px;
+    border: none;
+    height: 25px;
+    width: auto;
+    padding: 5px;
+    align-items: center;
+    /* background: none; */
+    width: 200px;
+
+}
+
+::placeholder {
+    text-align: center;
+}
+
+.btn1,
+.btn2 {
+    /* background-color: #4CAF50; */
+    background-color: yellow;
+    /* Green */
+    border: none;
+    color: black;
+
+    /* color: white; */
+    padding: 13px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    /* font-size: 16px; */
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+
+
+}
+
+.btn1:hover,
+.btn2:hover {
+    /* color: white; */
+    /* background-color: orangered; */
+
+    color: black;
+    transition: 0.3s ease;
+}
+
+.btn1:hover:active,
+.btn2:hover:active {
+    color: white;
+    background-color: green;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    /* background: none; */
+    /* border-bottom: 20px solid black; */
+    /* text-decoration: underline; */
+    transition: 0.3s ease-in-out;
+}
+
+table a#fsign {
+    /* font-size: small; */
+}
+
+table a#fpass:hover {
+    color: rgb(193, 193, 193);
+    transition: 0.3s ease-in-out;
+}

@@ -1,23 +1,37 @@
-import React from 'react'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 
-import image1 from './image1.jpg';
-import './Home.css'
+import image1 from '../images/image1.jpg'
+import '../Home.css'
+import { NavLink } from 'react-router-dom';
 
-const About = () => {
+
+
+const Home = () => {
+
     return (
-        <div>
+
+
+
+        <div className="wrapper">
+
+
+            <div id="mySidenav" className="sidenav">
+                <NavLink to="#" id="blog">Blog</NavLink>
+                <NavLink to="#" id="projects">Projects</NavLink>
+                <NavLink to="#" id="about">About</NavLink>
+                <NavLink to="#" id="contact">Contact</NavLink>
+            </div>
+
+
+
             <div className="container">
-                {/* <h1 className="Heading">
-                    What is PaveRM ?
-                </h1>
-                <h3 className="subHeading">
-                    A computer science portal
-                </h3>
-                <br /> */}
-                <table cellSpacing="60px" cellPadding="60px">
+
+                <table cellSpacing="60px" cellPadding="60px" align="center">
                     <thead>
                         <tr>
-                            <td><label className="Heading">This is About us Page</label><br /><label className="subHeading">You've been routed to About Us page.</label></td>
+                            <td><label className="Heading">What is PaveRM?</label><br />
+                                <label className="subHeading">A Road Reporting Portal</label></td>
                             <td></td>
                         </tr>
                     </thead>
@@ -46,9 +60,16 @@ const About = () => {
                         </tr>
                     </tbody>
                 </table>
+
+
             </div>
+
         </div>
+        // </div>
+
+
+
     )
 }
 
-export default About
+export default Home

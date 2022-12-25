@@ -1,58 +1,25 @@
 import React from 'react'
-// import logo from './logo.png';
+import image1 from '../images/image1.jpg'
+import '../Home.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import { NavLink } from 'react-router-dom';
 
-import image1 from './image1.jpg';
-import './Home.css'
-// import '../App.css'
-
-const Home = () => {
+const Create = () => {
     return (
-
-        // <div className="bg" style="background-image: url({background});">
         <div>
-            {/* <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                
-                <img src={logo} className="logo" alt="Logo" />
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
 
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav ml-auto text-center">
-                        <li className="nav-item active">
-                            <a className="nav-link" href="/Home">Home</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/Create">Create</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/History">History</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/About Us">About Us</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/Login">Login</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </nav> */}
-            {/* <p>Welcome to Homepage</p> */}
+            <div id="mySidenav" className="sidenav">
+                <NavLink to="#" id="blog">Blog</NavLink>
+                <NavLink to="#" id="projects">Projects</NavLink>
+                <NavLink to="#" id="about">About</NavLink>
+                <NavLink to="#" id="contact">Contact</NavLink>
+            </div>
 
             <div className="container">
-                {/* <h1 className="Heading">
-                    What is PaveRM ?
-                </h1>
-                <h3 className="subHeading">
-                    A computer science portal
-                </h3>
-                <br /> */}
                 <table cellSpacing="60px" cellPadding="60px">
                     <thead>
                         <tr>
-                            <td><label className="Heading">What is PaveRM?</label><br /><label className="subHeading">A Road Reporting Portal</label></td>
+                            <td><label className="Heading">This is Create Page</label><br /><label className="subHeading">You've been routed to Create page.</label></td>
                             <td></td>
                         </tr>
                     </thead>
@@ -82,31 +49,8 @@ const Home = () => {
                     </tbody>
                 </table>
             </div>
-
-            {/* <footer className="page-footer font-small blue bg-dark text-light">
-
-                <div className="footer-copyright text-center py-3">© 2022 Copyright:
-                    <a className="my-brand" style="font-family: Arial, Helvetica, sans-serif; font-size: small; color: #9a9da0;"
-                        href="#"> harshilchandratre.com</a>
-                </div>
-            </footer> */}
-
-
-
-
-
-
-
-
-
-
-
         </div>
-        // </div>
-
-
-
     )
 }
 
-export default Home
+export default Create

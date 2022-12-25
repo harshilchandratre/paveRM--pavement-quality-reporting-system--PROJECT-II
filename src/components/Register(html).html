@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="20; URL='./index/index.html'" /> -->
+    <title>Register</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            font-size: x-large;
+
+            /* background-image: linear-gradient(to right top, #d7bd20, #ecad36, #f89e4e, #fc9265, #f88a7b, #ec7a7f, #dd6b83, #cb5f87, #b24381, #942a7e, #71137b, #440679); */
+
+            background-image: url('./images/loginbg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: rgba(49, 49, 49, 0.71);
+            color: #fff;
+
+            border: none;
+            border-radius: 15px;
+            width: 600px;
+            height: auto;
+
+            /* resizing feature */
+            /* overflow: auto;
+            resize: both; */
+
+            /* shadow behind the box */
+            box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.683);
+            z-index: 1;
+
+        }
+
+        h1#loginhead {
+            font-size: 40px;
+        }
+
+        /* table {
+            margin: auto;
+            font-weight: bold;
+            color: #000000;
+        } */
+
+
+        table a {
+            text-decoration: none;
+            font-style: italic;
+            font-size: 20px;
+            color: rgb(156, 154, 154);
+        }
+
+        table a#fpass:hover {
+            color: rgb(171, 171, 171);
+            transition: 0.3s ease-in-out;
+        }
+
+        input[type=text],
+        input[type=password] {
+            border-radius: 8px;
+            border: none;
+            height: 25px;
+            width: auto;
+            padding: 5px;
+            align-items: center;
+            /* background: none; */
+            width: 200px;
+
+        }
+
+        ::placeholder {
+            align-items: center;
+        }
+
+        .btn1,
+        .btn2 {
+            /* background-color: #4CAF50; */
+            background-color: yellow;
+            /* Green */
+            border: none;
+            /* color: white; */
+            color: black;
+
+            padding: 13px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 25px;
+
+
+        }
+
+        .btn1:hover,
+        .btn2:hover {
+            /* color: white; */
+            color: black;
+
+            /* background-color: orangered; */
+            transition: 0.3s ease;
+        }
+
+        .btn1:hover:active,
+        .btn2:hover:active {
+            color: white;
+            background-color: green;
+            transition: 0.3s ease;
+        }
+
+        ::placeholder {
+            text-align: center;
+        }
+
+        input:focus {
+            outline: none;
+            /* background: none; */
+            /* border-bottom: 20px solid black; */
+            /* text-decoration: underline; */
+            transition: 0.3s ease-in-out;
+        }
+
+        table a#fsign {
+            font-size: small;
+        }
+
+        table a#fsign:hover {
+            color: rgb(171, 171, 171);
+            transition: 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" method="post" name="registerRequest" onsubmit="return matchpass()">
+            <table cellpadding="8" cellspacing="28" align="center">
+                <tr>
+                    <td colspan="2">
+                        <h1 align="center" id="loginhead">Register! <br><span>
+                                <hr>
+                            </span></h1>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%">E-mail</td>
+                    <td><input type="text" name="register_email" placeholder="Enter your email" required></td>
+                </tr>
+                <tr>
+                    <td width="50%">Create Password</td>
+                    <td><input type="password" name="register_createPass" placeholder="Create a new password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%">Confirm Password</td>
+                    <td><input type="password" name="register_confirmPass" placeholder="Rewrite your password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" width="50%"><a href="Login.html" id="fpass">Already a member?</a></td>
+
+                </tr>
+                <tr>
+                    <td align="center"><button class="btn1" type="reset">Reset</button></td>
+                    <td align="center"><button class="btn2" type="submit">Submit</button></td>
+                </tr>
+                <!-- <tr>
+                    <td><span><hr></span></td>
+                    <td><a id="fsign" href="#">New to site? Click here to sign up!</a></td>
+                </tr> -->
+            </table>
+        </form>
+    </div>
+
+    <!-- Form Validation Here-->
+    <script>
+        function matchpass() {
+            var firstpassword = document.registerRequest.register_createPass.value;
+            var secondpassword = document.registerRequest.register_confirmPass.value;
+
+            if (firstpassword == secondpassword) {
+                return true;
+            }
+            else {
+                alert("password must be same!");
+                return false;
+            }
+        }  
+    </script>
+
+</body>
+
+</html>

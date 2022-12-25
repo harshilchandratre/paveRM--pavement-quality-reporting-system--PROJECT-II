@@ -1,52 +1,52 @@
-import React from 'react'
+// import React from 'react'
+import 'bootstrap/dist/css/bootstrap.css';
 
-import image1 from './image1.jpg';
-import './Home.css'
+// import image1 from './image1.jpg';
+// import './login.css'
+// import './Home.css'
 
 const Login = () => {
     return (
-        <div>
-            <div className="container">
-                {/* <h1 className="Heading">
-                    What is PaveRM ?
-                </h1>
-                <h3 className="subHeading">
-                    A computer science portal
-                </h3>
-                <br /> */}
-                <table cellSpacing="60px" cellPadding="60px">
-                    <thead>
-                        <tr>
-                            <td><label className="Heading">This is Login Page</label><br /><label className="subHeading">You've been routed to Login page.</label></td>
-                            <td></td>
-                        </tr>
-                    </thead>
-                    <tbody>
+        <div className="backgroundlogin">
+            <div class="containerlogin">
+        <form action="#" method="post" name="loginRequest" onsubmit="return validateForm()">
+            <table cellpadding="8" cellspacing="28" align="center">
+                <tr>
+                    <td colspan="2">
+                        <h1 align="center" id="loginhead">Sign in! <br/><span>
+                                <hr/>
+                            </span></h1>
 
-                        <tr>
-                            <td><img className="subImg" src={image1} alt="img" /></td>
-                            <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo rerum, laudantium sunt culpa illum, aliquid dicta perspiciatis odio cumque laborum, similique cum deleniti architecto blanditiis impedit autem praesentium nostrum? Optio eveniet minima labore voluptatum deserunt quo nulla similique quaerat, eaque fuga qui temporibus itaque architecto sequi tempora. Dolorem odit nostrum qui minima eaque excepturi, commodi doloribus rem asperiores architecto totam animi sequi esse, voluptatibus vel sed, ratione accusamus doloremque perferendis? A molestias placeat error minus laboriosam voluptatum in ipsa. Amet corporis, a ullam impedit pariatur id temporibus omnis odit incidunt. Tempora, cumque vel. Veritatis, placeat provident? Totam quasi repudiandae debitis?</p></td>
-                        </tr>
-                        <tr>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%">E-mail</td>
+                    <td><input class="loginField" type="text" name="login_email" placeholder="Enter your email" required /></td>
+                </tr>
+                <tr>
+                    <td width="50%">Password</td>
+                    <td><input class="loginField" type="password" name="login_password" placeholder="Enter your password" required /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" width="50%"><a href="Register.html" id="fpass">New to platform? Click here to
+                            register.</a>
+                    </td>
 
-                            <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo rerum, laudantium sunt culpa illum, aliquid dicta perspiciatis odio cumque laborum, similique cum deleniti architecto blanditiis impedit autem praesentium nostrum? Optio eveniet minima labore voluptatum deserunt quo nulla similique quaerat, eaque fuga qui temporibus itaque architecto sequi tempora. Dolorem odit nostrum qui minima eaque excepturi, commodi doloribus rem asperiores architecto totam animi sequi esse, voluptatibus vel sed, ratione accusamus doloremque perferendis? A molestias placeat error minus laboriosam voluptatum in ipsa. Amet corporis, a ullam impedit pariatur id temporibus omnis odit incidunt. Tempora, cumque vel. Veritatis, placeat provident? Totam quasi repudiandae debitis?</p></td>
-                            <td><img className="subImg" src={image1} alt="img" /></td>
-                        </tr>
-                        <tr>
-                            <td><img className="subImg" src={image1} alt="img" /></td>
-                            <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo rerum, laudantium sunt culpa illum, aliquid dicta perspiciatis odio cumque laborum, similique cum deleniti architecto blanditiis impedit autem praesentium nostrum? Optio eveniet minima labore voluptatum deserunt quo nulla similique quaerat, eaque fuga qui temporibus itaque architecto sequi tempora. Dolorem odit nostrum qui minima eaque excepturi, commodi doloribus rem asperiores architecto totam animi sequi esse, voluptatibus vel sed, ratione accusamus doloremque perferendis? A molestias placeat error minus laboriosam voluptatum in ipsa. Amet corporis, a ullam impedit pariatur id temporibus omnis odit incidunt. Tempora, cumque vel. Veritatis, placeat provident? Totam quasi repudiandae debitis?</p></td>
-                        </tr>
-                        <tr>
 
-                            <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo rerum, laudantium sunt culpa illum, aliquid dicta perspiciatis odio cumque laborum, similique cum deleniti architecto blanditiis impedit autem praesentium nostrum? Optio eveniet minima labore voluptatum deserunt quo nulla similique quaerat, eaque fuga qui temporibus itaque architecto sequi tempora. Dolorem odit nostrum qui minima eaque excepturi, commodi doloribus rem asperiores architecto totam animi sequi esse, voluptatibus vel sed, ratione accusamus doloremque perferendis? A molestias placeat error minus laboriosam voluptatum in ipsa. Amet corporis, a ullam impedit pariatur id temporibus omnis odit incidunt. Tempora, cumque vel. Veritatis, placeat provident? Totam quasi repudiandae debitis?</p></td>
-                            <td><img className="subImg" src={image1} alt="img" /></td>
-                        </tr>
-                        <tr>
 
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                </tr>
+                <tr>
+                    <td align="center"><button class="btn1" type="reset">Reset</button></td>
+                    <td align="center"><button class="btn2" type="submit">Submit</button></td>
+                </tr>
+                    <tr>
+                    <td><span><hr/></span></td>
+                    <td><a id="fsign" href="#">New to site? Click here to sign up!</a></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
         </div>
     )
 }

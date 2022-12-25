@@ -1,24 +1,24 @@
 import React from 'react'
-// import logo from './images/logo.png'
+import 'bootstrap/dist/css/bootstrap.css';
 
-import image1 from './image1.jpg';
-import './Home.css'
+import image1 from '../images/image1.jpg'
+import '../Home.css'
+import { NavLink } from 'react-router-dom';
 
-const History = () => {
+const About = () => {
     return (
         <div>
+            <div id="mySidenav" className="sidenav">
+                <NavLink to="#" id="blog">Blog</NavLink>
+                <NavLink to="#" id="projects">Projects</NavLink>
+                <NavLink to="#" id="about">About</NavLink>
+                <NavLink to="#" id="contact">Contact</NavLink>
+            </div>
             <div className="container">
-                {/* <h1 className="Heading">
-                    What is PaveRM ?
-                </h1>
-                <h3 className="subHeading">
-                    A computer science portal
-                </h3>
-                <br /> */}
                 <table cellSpacing="60px" cellPadding="60px">
                     <thead>
                         <tr>
-                            <td><label className="Heading">This is History Page</label><br /><label className="subHeading">You've been routed to History page.</label></td>
+                            <td><label className="Heading">This is About us Page</label><br /><label className="subHeading">You've been routed to About Us page.</label></td>
                             <td></td>
                         </tr>
                     </thead>
@@ -52,4 +52,4 @@ const History = () => {
     )
 }
 
-export default History
+export default About

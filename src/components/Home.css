@@ -1,25 +1,111 @@
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
   display: none;
+} */
+
+
+/* animated texture background */
+
+
+
+
+/* parallax background */
+
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  /* background-color: #3a3a3a; */
+  background-color: #1d2953f7;
+  overflow: hidden;
+  z-index: -1000;
 }
 
+/* Style the thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #F90;
+  border-radius: 25px;
+  /* background-image: -webkit-linear-gradient(45deg,
+      rgba(35, 35, 35, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, .2) 50%,
+      rgba(255, 255, 255, .2) 75%,
+      transparent 75%,
+      transparent); */
+
+
+  background-image: -webkit-linear-gradient(45deg,
+      rgba(255, 255, 255, .2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, .2) 50%,
+      rgba(255, 255, 255, .2) 75%,
+      transparent 75%,
+      transparent)
+}
+
+/* ::-webkit-scrollbar-thumb:hover{
+  background-color: rgb(97, 97, 97);;
+} */
+
 body {
+  height: 100%;
+  overflow-x: hidden;
+
   margin: 0;
   padding: 0;
-  height: auto;
-  /* overflow: hidden; */
-
   box-sizing: border-box;
-
-  /* background-image: url('../components/bg.jpg'); */
-  /* background-color: #3E497A; */
-  background-color: white;
-
-  /* background-repeat: no-repeat;
-  background-size: cover; */
-  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.wrapper {
+  /* background-color: #000; */
+  /* width: fit-content; */
+  /* width: 1090px; */
+
+
+}
+
+.container {
+  /* background-color: white; */
+  /* background-color: #2196F3; */
+  /* background: none; */
+
+  /* position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+
+  margin-top: 65px;
+  margin-bottom: auto;
+  padding: 20px;
+
+  /* position: relative; */
+  /* z-index: -1; */
+  width: auto;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.history-container {
+  width: 800px;
+  margin: 0 auto;
+  height: fit-content;
+  margin-top: 10%;
+
+
+}
+
+/* .welcome-profile{
+  margin-left: 200px;
+} */
+
+
 
 .my-brand {
   text-decoration: none;
@@ -36,50 +122,56 @@ body {
 }
 
 .navbar {
-  top: 0;
-  width: 100%;
-  position: fixed;
-  overflow: hidden;
-  display: flex;
+  /* top: 0;
+  left: 0;
+  width: 100%; */
+  position: sticky;
+
+  background-color: #1d2953f7;
   align-items: center;
 
-  /* background-color: #21325E; */
-  /* background-color: yellow; */
+  /* background-color: rgba(255, 153, 0, 0.95); */
+  /* background-image: -webkit-linear-gradient(45deg,
+      rgba(255, 255, 255, .2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, .2) 50%,
+      rgba(255, 255, 255, .2) 75%,
+      transparent 75%,
+      transparent); */
+
+  /* background-image: -webkit-linear-gradient(45deg,
+    
+      rgba(255, 255, 255, .2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, .2) 50%,
+      rgba(255, 255, 255, .2) 75%,
+      transparent 75%,
+      transparent); */
+
+
+  justify-content: space-between;
+
+  box-shadow: 0 2px 10px rgba(62, 62, 62, 0.566);
+
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 
 .logo {
   height: 45px;
   width: auto;
-  transform: rotate(45deg);
+  transform: rotate(0deg);
 }
 
-.container {
-  background-color: #F0F0F0;
-  /* border-radius: 2px solid black; */
-  margin-top: 80px;
-  margin-bottom: 40px;
 
-  z-index: -1;
-
-  /* responsiveness */
-  background-size: contain;
-  overflow: auto;
-  resize: horizontal;
-
-  /* To set a fix dimension box */
-  /* aspect-ratio: 100 / 100; */
-
-  /* bottom: ; */
-
-  height: auto;
-  width: 1200px;
-  border: none;
-
-  /* overflow: hidden; */
-
-  /* margin: 0; */
-  padding: 20px;
-}
 
 .Heading {
   text-align: center;
@@ -96,4 +188,182 @@ body {
   height: 60px;
   width: 60px;
   border: 2px solid black;
+}
+
+.my-brand-name {
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  color: #9a9da0;
+  text-decoration: none;
+
+}
+
+.my-brand-name:hover {
+  color: #9a9da0;
+  text-decoration: none;
+
+}
+
+.page-footer {
+
+  /* sticky footer */
+  position: fixed;
+  height: 50px;
+  /* background-color: red; */
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+
+
+}
+
+#notfound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+
+
+}
+
+.notfound {
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.notfound-404 {
+  background-color: pink;
+  justify-content: center;
+  text-align: center;
+}
+
+.linktohome {
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.linktohome:hover {
+  background-color: white;
+  color: black;
+}
+
+/* display: inline-block;
+    position: relative;
+    width: 100%; */
+
+p {
+  max-width: 600px;
+}
+
+
+/* sidenavs */
+
+#mySidenav a {
+  /* top: 50%; */
+  /* transform: translate(-50%, -50%); */
+
+  position: fixed;
+  left: -88px;
+  transition: 0.2s ease-in-out;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  margin-top: 15%;
+  /* border: 2px solid black; */
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+.helpboard {
+  position: fixed;
+  left: 90;
+
+}
+
+#about {
+  top: 20px;
+  background-color: #04AA6D;
+  /* background-color: yellow; */
+  /* color: black; */
+}
+
+#blog {
+  top: 80px;
+  background-color: #2196F3;
+  /* background-color: black; */
+  /* color: white; */
+}
+
+#projects {
+  top: 140px;
+  background-color: #f44336;
+  /* background-color: yellow; */
+  /* color: black; */
+}
+
+#contact {
+  top: 200px;
+  background-color: #555
+    /* background-color: black; */
+    /* color: white; */
+}
+
+
+
+/*
+/* chatgpt responsive code for table */
+
+table {
+  align-items: center;
+  width: 100%;
+  /* Set the table to take up the full width of the container */
+  border-collapse: collapse;
+  /* Remove the space between table cells */
+}
+
+td {
+  vertical-align: top;
+  /* Align the content at the top of the cell */
+}
+
+img {
+  max-width: 100%;
+  /* Set the maximum width of the image to the full width of the cell */
+}
+
+p {
+  margin: 0;
+  /* Remove the default margin from the paragraph */
+}
+
+@media (max-width: 600px) {
+  td {
+    display: block;
+    /* Make each cell display as a block element */
+    width: 100%;
+    /* Set the width of each cell to the full width of the container */
+    border: none;
+    /* Remove the border from the cells */
+  }
+
+  img {
+    margin: 0 auto;
+    /* Center the image */
+  }
 }
