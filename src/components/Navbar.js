@@ -5,6 +5,7 @@ import logo from '../components/images/logo.png'
 import { NavLink } from 'react-router-dom'
 import { useAuth0 } from "@auth0/auth0-react";
 
+
 const Navbar = () => {
 
     const { loginWithRedirect, user, isAuthenticated, logout, isLoading } = useAuth0();
@@ -34,7 +35,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mx-auto text-center mt-2">
 
-                        <li className="nav-item active">
+                        <li className="nav-item">
                             <NavLink className="nav-link" to="/">Home</NavLink>
                         </li>
 
@@ -53,7 +54,15 @@ const Navbar = () => {
 
                             </>)
                                 :
-                                <></>
+                                <>
+                                    <li className="nav-item">
+                                    <NavLink className="nav-link" onClick={() => loginWithRedirect()}>Create</NavLink>
+                                </li>
+
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" onClick={() => loginWithRedirect()}>History</NavLink>
+                                </li>
+                                </>
 
                         }
 

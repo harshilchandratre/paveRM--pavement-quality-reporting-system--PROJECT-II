@@ -13,6 +13,10 @@ import About from './components/About/About';
 import Login from './components/Login';
 import Error404 from './components/Error404/Error404';
 
+import FormOne from './components/form_one/FormOne';
+
+// import Chat from './components/ChatApp/Chat';
+
 import 'bootstrap/dist/css/bootstrap.css';
 
 
@@ -36,9 +40,13 @@ function App() {
         <Route path="/history" element={<History />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
+
+        <Route path="/create/FormOne" element={<FormOne />} />
+
         <Route path="*" element={<Error404 />} />
 
       </Routes>
+      {/* <Chat /> */}
       <Footer />
     </div>
   );

@@ -1,6 +1,8 @@
 // import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 
+import { NavLink } from 'react-router-dom';
+
 // import image1 from './image1.jpg';
 // import './login.css'
 // import './Home.css'
@@ -28,8 +30,8 @@ const Login = () => {
                     <td><input class="loginField" type="password" name="login_password" placeholder="Enter your password" required /></td>
                 </tr>
                 <tr>
-                    <td colspan="2" width="50%"><a href="Register.html" id="fpass">New to platform? Click here to
-                            register.</a>
+                    <td colspan="2" width="50%"><NavLink to="Register.html" id="fpass">New to platform? Click here to
+                            register.</NavLink>
                     </td>
 
 
@@ -41,7 +43,7 @@ const Login = () => {
                 </tr>
                     <tr>
                     <td><span><hr/></span></td>
-                    <td><a id="fsign" href="#">New to site? Click here to sign up!</a></td>
+                    <td><NavLink id="fsign" to="#">New to site? Click here to sign up!</NavLink></td>
                 </tr>
             </table>
         </form>
