@@ -10,6 +10,29 @@ const Navbar = () => {
 
     const { loginWithRedirect, user, isAuthenticated, logout, isLoading } = useAuth0();
 
+    // script for loading bar starts
+    document.onreadystatechange = function () {
+        var loadingBar = document.getElementById("loading-bar");
+
+        if (document.readyState === "complete") {
+            // Page has finished loading
+            loadingBar.style.width = "100%";
+            setTimeout(function () {
+                // Hide the loading bar after a short delay
+                loadingBar.style.display = "none";
+            }, 500);
+        } else {
+            // Page is still loading
+            // loadingBar.style.width = "0";
+            // loadingBar.style.display = "block";
+
+            loadingBar.style.transition = "width 10s linear";
+            loadingBar.style.width = "80%"; // Adjust the initial width value as needed
+            loadingBar.style.display = "block";
+        }
+    };
+    // script for loading bar ends
+
 
     return (
         <div>
@@ -56,12 +79,12 @@ const Navbar = () => {
                                 :
                                 <>
                                     <li className="nav-item">
-                                    <NavLink className="nav-link" onClick={() => loginWithRedirect()}>Create</NavLink>
-                                </li>
+                                        <NavLink className="nav-link" onClick={() => loginWithRedirect()}>Create</NavLink>
+                                    </li>
 
-                                <li className="nav-item">
-                                    <NavLink className="nav-link" onClick={() => loginWithRedirect()}>History</NavLink>
-                                </li>
+                                    <li className="nav-item">
+                                        <NavLink className="nav-link" onClick={() => loginWithRedirect()}>History</NavLink>
+                                    </li>
                                 </>
 
                         }
@@ -99,6 +122,8 @@ const Navbar = () => {
                     </ul>
                 </div>
             </nav>
+
+            <div id="loading-bar"></div>
         </div>
 
 
